@@ -1,0 +1,22 @@
+{
+  "name": "nodejs_root",
+  "version": "1.0.0",
+  "description": "node js api server test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ultrajg86/nodejs_root.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ultrajg86/nodejs_root/issues"
+  },
+  "homepage": "https://github.com/ultrajg86/nodejs_root#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
