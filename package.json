@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/ultrajg86/nodejs_root#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "bcrypt": "^5.0.1",
+    "express": "^4.18.1",
+    "passport": "^0.6.0",
+    "passport-kakao": "^1.0.1",
+    "passport-local": "^1.0.0"
   }
 }

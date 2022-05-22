@@ -45,12 +45,9 @@ app.get("/api/users", (req, res) => {
  * 
  */
 app.get("/api/users/user", (req, res) => {
-
     const user_id = req.query.user_id
-
     //filter라는 함수는 자바스크립트에서 배열 함수이다. 필터링을 할때 많이 사용된다 필터링한 데이터를 새로운 배열로 반환한다.
     const user = users.filter(data => data.id == user_id);
-
     res.json({ ok: false, user: user })
 });
 
@@ -61,12 +58,9 @@ app.get("/api/users/user", (req, res) => {
  *  post로 요청시 body에 데이터를 담아서 보낼수 있듯이 get도 사용이 가능하다.
  */
 app.get("/api/users/userBody", (req, res) => {
-
-    const user_id = req.body.user_id
-
+    const user_id = req.body.user_id;
     //filter라는 함수는 자바스크립트에서 배열 함수이다. 필터링을 할때 많이 사용된다 필터링한 데이터를 새로운 배열로 반환한다.
     const user = users.filter(data => data.id == user_id);
-
     res.json({ ok: false, user: user })
 });
 
@@ -85,13 +79,10 @@ app.get("/api/users/userBody", (req, res) => {
  *  그렇기 때문에 다른 라우터 보다 아래 있어야 한다.
  */
 app.get("/api/users/:user_id", (req, res) => {
-
-    const user_id = req.params.user_id
-
+    const user_id = req.params.user_id;
     //filter라는 함수는 자바스크립트에서 배열 함수이다. 필터링을 할때 많이 사용된다 필터링한 데이터를 새로운 배열로 반환한다.
     const user = users.filter(data => data.id == user_id);
-
-    res.json({ ok: true, user: user })
+    res.json({ ok: true, user: user });
 });
 
 /**
@@ -102,14 +93,11 @@ app.get("/api/users/:user_id", (req, res) => {
  *  req.body에 데이터를 담아서 보통 보낸다.
  */
 app.post("/api/users/add", (req, res) => {
-
     // 구조분해를 통해 id 와 name을 추출
-    const { id, name } = req.body
-
+    const { id, name } = req.body;
     //concat 함수는 자바스크립트에서 배열 함수이다. 새로운 데이터를 추가하면 새로운 배열로 반환한다.
     const user = users.concat({ id, name });
-
-    res.json({ ok: true, users: user })
+    res.json({ ok: true, users: user });
 });
 
 /**
@@ -117,10 +105,8 @@ app.post("/api/users/add", (req, res) => {
  * @description 전체 데이터를 수정할 때 사용되는 Method
  */
 app.put("/api/users/update", (req, res) => {
-
     // 구조분해를 통해 id 와 name을 추출
-    const { id, name } = req.body
-
+    const { id, name } = req.body;
     //map 함수는 자바스크립트에서 배열 함수이다. 요소를 일괄적으로 변경할 때 사용됩니다.
     const user = users.map(data => {
 
